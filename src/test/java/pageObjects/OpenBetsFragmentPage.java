@@ -27,7 +27,6 @@ public class OpenBetsFragmentPage {
     @FindBy(className = "placed-bet-selection__price")
     private List<WebElement> oddValue;
 
-
     public void checkOpenBet(String betAmount) {
         ((JavascriptExecutor) driver)
                 .executeScript("window.scrollTo(document.body.scrollHeight,0)");
@@ -43,6 +42,5 @@ public class OpenBetsFragmentPage {
         Assert.assertTrue(stakeReturnsValue.get(0).getText().contains(toReturnStringValue));
         Assert.assertEquals(premierLeagueBetting.getValueOfFirstButtonOdd(), oddValue.get(0).getText());
     }
-
 
 }
